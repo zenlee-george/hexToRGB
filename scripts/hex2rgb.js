@@ -3,7 +3,7 @@ const convertBtn = document.getElementById('convert-btn');
 const resultDiv = document.getElementById('result');
 
 convertBtn.addEventListener('click', () => {
-    const hexCode = hexInput.value.trim();
+    const hexCode = hexInput.value.trim(); //used trim() to remove any white space from both ends of a string.
     if (hexCode.length === 7 && hexCode.startsWith('#')) {
         const rgb = hexToRgb(hexCode);
         resultDiv.textContent = `RGB: ${rgb.r}, ${rgb.g}, ${rgb.b}`;
